@@ -18,3 +18,7 @@
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+# 修改默認 IP (可選)
+# sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
+
+sed -i 's/CONFIG_TARGET_ROOTFS_PARTSIZE=.*/CONFIG_TARGET_ROOTFS_PARTSIZE=1000/g' .config
